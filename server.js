@@ -7,5 +7,7 @@ const server = express();
 server.use(helmet());
 server.use(express.json());
 
+server.get('/', (req, res) => res.send("Success"));
+
 
 module.exports = server;
