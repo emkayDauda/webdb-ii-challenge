@@ -46,7 +46,7 @@ function carBodyValidator (req, res, next) {
     } else if (!vin || !make || !model || !mileage) {
         res.status(400).json({error: true, message: "Some required parameters missing"})
     } else {
-        req.valCarBody = { vin, make, model, mileage }
+        req.valCarBody = { vin, make, model, mileage ,transmission, status }
         next()
     }
 }
